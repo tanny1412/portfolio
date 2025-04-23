@@ -35,7 +35,7 @@ export default function Home() {
             alt="Your Headshot"
             width={500}
             height={500}
-            className="rounded-full shadow-lg"
+            className="rounded-full shadow-lg transition-transform hover:scale-105"
           />
         </div>
         <div className="md:order-1">
@@ -45,10 +45,10 @@ export default function Home() {
           </p>
           <div className="flex space-x-4">
             <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline">LinkedIn</Button>
+              <Button variant="outline" className="transition-transform hover:scale-105">LinkedIn</Button>
             </Link>
             <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline">GitHub</Button>
+              <Button variant="outline" className="transition-transform hover:scale-105">GitHub</Button>
             </Link>
           </div>
         </div>
@@ -59,18 +59,18 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-8">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div key={project.title} className="rounded-lg shadow-md overflow-hidden">
+            <div key={project.title} className="rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={400}
                 height={300}
-                className="object-cover w-full h-48"
+                className="object-cover w-full h-48 transition-opacity hover:opacity-90"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4">{project.description}</p>
-                <Link href={project.link} className="text-teal-500 hover:underline">
+                <Link href={project.link} className="text-teal-500 hover:underline transition-colors hover:text-teal-700">
                   View Project
                 </Link>
               </div>
@@ -90,10 +90,10 @@ export default function Home() {
         </p>
         <div className="flex justify-center space-x-4">
           <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="secondary">LinkedIn</Button>
+            <Button variant="secondary" className="transition-transform hover:scale-105">LinkedIn</Button>
           </Link>
           <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="secondary">GitHub</Button>
+            <Button variant="secondary" className="transition-transform hover:scale-105">GitHub</Button>
           </Link>
         </div>
       </section>
